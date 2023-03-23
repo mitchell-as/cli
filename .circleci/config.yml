@@ -16,6 +16,7 @@ jobs:
             wget https://platform.activestate.com/dl/cli/_pdli01/install.sh
             chmod +x install.sh
             export VERBOSE=true
+            setenv
             ./install.sh --force -t /tmp/activestate
       - save_cache:
           key: go-mod-v4-{{ checksum "go.sum" }}
