@@ -17,7 +17,7 @@ jobs:
             chmod +x install.sh
             export VERBOSE=true
             env
-            ./install.sh --force -t /tmp/activestate
+            ./install.sh -b mitchell/dx-1634 --force -t /tmp/activestate
       - save_cache:
           key: go-mod-v4-{{ checksum "go.sum" }}
           paths:
